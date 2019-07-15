@@ -8,27 +8,29 @@ constructor(props){
   this.state = {
     weekDay: ['Mon', 'Tue', 'Wen', 'Thur','Fri','Sat', 'Sun'],
     celsiusHigh: 0,
-    celsiusLow: 1
+    celsiusLow: 1,
+    isClicked: false
   }
-  this.celsiusChanger = this.celsiusChanger.bind(this);
+  // this.celsiusChanger = this.celsiusChanger.bind(this);
+  // this.clickEvent = this.clickEvent.bind(this);
 }
 // Math.floor(Math.random() * 50)
 
-celsiusChanger() {
-  this.setState({
-      celsius : Math.floor(Math.random() * 50)
-  });
-}
+// celsiusChanger() {
+//   this.setState({
+//       celsiusHigh : Math.floor(Math.random() * 50)
+//   });
+// }
+// clickEvent(){
 
-
+// }
 render(){  
-  
     return( 
-      <div > 
+      <div onClick={this.clickEvent}> 
       <Day 
       valueDay={this.state.weekDay[0]}
       valueCelsiusHigh={this.state.celsiusHigh}
-      valueCelsiusLow={this.state.celsiusLow}
+      valueCelsiusLow={this.state.celsiusLow}    
       /> 
       <Day 
       valueDay={this.state.weekDay[1]}
@@ -55,11 +57,5 @@ render(){
   }
 }
 
-// function renderFunc(){
-//   const timesToRender = [0,1,2,3,4]
-//   return(
-//     null
-//   )
-// }
 
  
