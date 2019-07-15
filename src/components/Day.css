@@ -1,4 +1,11 @@
-.img{
-    width: 50px;
-    height: 50px;
+.day{
+    display: inline-block;
+    text-align: center;
+}
+
+.day-day{
+color:green;
+}
+.day-celsius{
+    color:red;
 }
